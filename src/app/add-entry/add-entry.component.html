@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Entry Form</h1>
+  {{diagnostic}}
+  <form #entryForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field>
+        <input matInput [(ngModel)]="model.substance" name="substance" placeholder="Substance">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Date" name="date" [(ngModel)]="model.date">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Amount" name="amount" [(ngModel)]="model.amount">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Unit" name="unit" [(ngModel)]="model.unit">
+      </mat-form-field>
+    </div>
+    <button mat-raised-button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
